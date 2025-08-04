@@ -4,17 +4,53 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="description" content="Discover GitHub profiles instantly! Search any GitHub username to view profile details, repositories, followers, and more. Built by Yeasin with responsive design for all devices.">
+ <meta name="keywords" content="GitHub profile finder, GitHub search, developer profiles, GitHub API, repository explorer, Yeasin, web application, responsive design">
+ <meta name="author" content="Yeasin">
+ <meta name="robots" content="index, follow">
+ <meta name="language" content="English">
+ <meta name="revisit-after" content="7 days">
+ 
+ 
+ <meta property="og:title" content="GitHub Profile Finder - Search & Explore GitHub Users">
+ <meta property="og:description" content="Discover GitHub profiles instantly! Search any GitHub username to view profile details, repositories, followers, and more. Built by Yeasin.">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://yourwebsite.com/github-profile-finder">
+ <meta property="og:image" content="https://yourwebsite.com/github-finder-preview.jpg">
+ <meta property="og:image:alt" content="GitHub Profile Finder Application Screenshot">
+ <meta property="og:site_name" content="Yeasin's Web Projects">
+ <meta property="og:locale" content="en_US">
+ 
+ <!-- Twitter Card Meta Tags -->
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="GitHub Profile Finder - Search & Explore GitHub Users">
+ <meta name="twitter:description" content="Discover GitHub profiles instantly! Search any GitHub username to view profile details, repositories, followers, and more.">
+ <meta name="twitter:image" content="https://yourwebsite.com/github-finder-preview.jpg">
+ <meta name="twitter:image:alt" content="GitHub Profile Finder Application">
+ <meta name="twitter:creator" content="@YourTwitterHandle">
+ <meta name="twitter:site" content="@YourTwitterHandle">
+ 
+ <!--Meta Tags for Better SEO -->
+ <meta name="theme-color" content="#794AF0">
+ <meta name="msapplication-TileColor" content="#794AF0">
+ <meta name="application-name" content="GitHub Profile Finder">
+ <meta name="apple-mobile-web-app-title" content="GitHub Finder">
+ <meta name="apple-mobile-web-app-capable" content="yes">
+ <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+ 
+ <!-- Canonical URL (prevents duplicate content issues) -->
+ <link rel="canonical" href="https://yourwebsite.com/github-profile-finder">
+ 
  <title>GitHub profile find</title>
- <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="style.css" type="text/css" media="all" />
 </head>
 
 <body>
   <div class="container">
    <span id="error"></span>
-   <div>
-    <label for="username"></label>
-    <input type="text" name="username" id="username" value="" placeholder="GitHub username..."/>
-    <input type="button" name="" id="button" value="submit" />
+   <div class="search-section">
+    <input type="text" name="username" id="username" value="" placeholder="Enter GitHub username..."/>
+    <input type="button" name="" id="button" value="Search Profile" />
    </div>
    <div class="image">
     <img src="" alt="" id="image">
@@ -24,21 +60,24 @@
   
   <details id="details">
    <summary>
-    More info
+    More Profile Information
    </summary>
    <ol id="list">
     <li id="id"></li>
     <li id="location"></li>
     <li id="create"></li>
     <li id="repo"></li>
-   <li id="followers"></li>
+    <li id="followers"></li>
     <li id="following"></li>
-    
    </ol>
+   <button class="load-more" onclick="loadMoreData()">Load Repository Details</button>
   </details>
-
   </div>
 
-<script src="app.js" type="text/javascript" charset="utf-8"></script>
+ <section id="repository">
+  
+ </section>
+ 
+  <script src="app.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
